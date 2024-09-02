@@ -11,10 +11,9 @@ class Clase_login(QMainWindow, Ui_MainWindow):
     def mostrar_error(self):
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Warning)
-        msg.setText("Este es un mensaje de advertencia.")
+        msg.setText("Datos de Usuario y/o Contraseña incorrectos.")
         msg.setWindowTitle("Advertencia")
-        msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-
+        msg.setStandardButtons(QMessageBox.Ok)
         # Aplicar estilo personalizado
         msg.setStyleSheet("""
             QMessageBox {
@@ -35,6 +34,7 @@ class Clase_login(QMainWindow, Ui_MainWindow):
                 background-color: #81A1C1;
             }
         """)
+        msg.exec()
 if __name__ == "__main__":
     app = QApplication(sys.argv)  # Crea la aplicación
     window = Clase_login()  # Crea una instancia de la ventana principal
