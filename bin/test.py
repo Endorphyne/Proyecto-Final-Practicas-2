@@ -2,6 +2,7 @@
 from mysql.connector import MySQLConnection,Error
 from db_conection_config import conexion_db
 import bcrypt
+from datetime import datetime
 
 def comprobar_credenciales(usuario:str,contra:str) -> bool:
     '''
@@ -35,7 +36,7 @@ def comprobar_credenciales(usuario:str,contra:str) -> bool:
         cursor.close()
         conexion.close()
     return flag
-def agregar_usuario(usuario:str,contraseña:str,correo:str):
+def agregar_usuario(usuario:str,contraseña:str,correo:str,grupo:int = 1):
     ''''
     Recibe datos validados previamente para solo subirlos a la DB, no retorna ningun valor
     '''
@@ -43,11 +44,12 @@ def agregar_usuario(usuario:str,contraseña:str,correo:str):
     conexion = MySQLConnection(**config_db)
     cursor = conexion.cursor()
     hashpw = bcrypt.hashpw((contraseña.encode('utf-8')),bcrypt.gensalt()).decode('utf-8')
-    consultaSQL = "INSERT INTO usuarios (usuario,password,correo) VALUES (%s,%s,%s)"
-    values = (usuario,hashpw,correo)
+    consultaSQL = "INSERT INTO usuarios (usuario,password,correo,grupo,fecha_creacion,ult_modificacion) VALUES (%s,%s,%s,%s,%s,%s)"
+    values = (usuario,hashpw,correo,grupo,datetime.now(),datetime.now())
     try: 
         cursor.execute(consultaSQL,values)
         conexion.commit()
+        print("usuario agregado")
     except Error as err:
         print(f"Error: {err}")
     finally:
@@ -77,3 +79,4 @@ def recuperar_contrasenia(nueva_contrasenia:str,id_usuario:int):
 '''
 Realizar la conexion logica con las ventanas SQL, Funciones 2 y 3 requieren los datos previos validados antes de pasarlos, ver si mejoraralo.
 '''
+agregar_usuario("lautaro","peperoni","kici@gmail.com",1)
