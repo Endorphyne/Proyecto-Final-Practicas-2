@@ -1,7 +1,7 @@
 from ast import parse
 from configparser import ConfigParser
 
-def conexion_db(archivo = "config.ini", seccion = "test"):
+def conexion_db(archivo = "config.ini", seccion = "db_test_usuarios"):
     '''
     Pasar como datos el archivo o ruta de archivo donde se encuentren las credenciales de la DB, como segundo valor pasar seccion del archivo al que desea conectarse
     '''

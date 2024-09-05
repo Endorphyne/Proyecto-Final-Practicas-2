@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
-from Ventana_Login_Usuarios import Ui_MainWindow  # Asegúrate de que este es el nombre correcto del archivo convertido
+# from REMPLAZAR_ARCHIVO import Ui_MainWindow  # Asegúrate de que este es el nombre correcto del archivo convertido
 
 class Clase_login(QMainWindow, Ui_MainWindow):
     def __init__(self):
