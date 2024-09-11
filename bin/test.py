@@ -77,6 +77,6 @@ def recuperar_contrasenia(nueva_contrasenia:str,id_usuario:int):
         conexion.close()
 #TODO's 
 '''
-Realizar la conexion logica con las ventanas SQL, Funciones 2 y 3 requieren los datos previos validados antes de pasarlos, ver si mejoraralo.
+Realizar la conexion logica con las ventanas SQL, Funciones agregar_usuario y recuperar_contrasenia requieren los datos previos validados antes de pasarlos, ver si mejoraralo.
 '''
 agregar_usuario("lautaro","peperoni","kici@gmail.com",1)
