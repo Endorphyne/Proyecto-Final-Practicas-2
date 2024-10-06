@@ -1,0 +1,122 @@
+/* Fondo de las ventanas */
+QWidget {
+    background-color: #232743; /* Azul oscuro */
+    color: #D8DBE2; /* Gris claro */
+}
+
+/* Botones */
+QPushButton {
+    background-color: #5E7CE2; /* Azul claro */
+    color: #232743; /* Azul oscuro para el texto */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QPushButton:hover {
+    background-color: #797979; /* Gris oscuro cuando se pasa el mouse */
+    color: #D8DBE2; /* Texto claro */
+}
+
+QPushButton:pressed {
+    background-color: #5E7CE2; /* Azul claro */
+    color: #D8DBE2; /* Texto claro */
+}
+
+/* QLineEdit (cajas de texto) */
+QLineEdit {
+    background-color: #D8DBE2; /* Gris claro */
+    color: #232743; /* Azul oscuro */
+    border: 1px solid #797979; /* Borde gris oscuro */
+    border-radius: 3px;
+    padding: 3px;
+}
+
+/* ComboBox */
+QComboBox {
+    background-color: #D8DBE2; /* Fondo gris claro */
+    color: #232743; /* Texto azul oscuro */
+    border: 1px solid #5E7CE2; /* Borde azul claro */
+    border-radius: 3px;
+}
+
+/* Labels */
+QLabel {
+    color: #D8DBE2; /* Texto gris claro */
+}
+
+/* Checkboxes */
+QCheckBox {
+    color: #D8DBE2; /* Texto gris claro */
+}
+
+QCheckBox::indicator {
+    border: 1px solid #5E7CE2; /* Borde azul claro */
+    width: 15px;
+    height: 15px;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #5E7CE2; /* Azul claro */
+}
+
+/* Barras de desplazamiento */
+QScrollBar:vertical {
+    background-color: #232743; /* Fondo azul oscuro */
+    width: 15px;
+    margin: 15px 3px 15px 3px;
+    border: 1px solid #5E7CE2; /* Borde azul claro */
+}
+
+QScrollBar::handle:vertical {
+    background-color: #5E7CE2; /* Azul claro */
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #797979; /* Gris oscuro al pasar el mouse */
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background-color: #797979; /* Botones gris oscuro */
+    height: 15px;
+    subcontrol-origin: margin;
+}
+
+/* --- Ajustes para pestañas (QTabBar) --- */
+QTabBar::tab {
+    background-color: #5E7CE2; /* Fondo azul claro */
+    color: #232743; /* Texto azul oscuro */
+    padding: 10px;
+    border: 1px solid #232743; /* Borde azul oscuro */
+    border-radius: 5px;
+}
+
+QTabBar::tab:selected {
+    background-color: #232743; /* Azul oscuro */
+    color: #D8DBE2; /* Texto gris claro */
+}
+
+/* --- Ajustes para tablas (QTableView y QHeaderView) --- */
+QHeaderView::section {
+    background-color: #5E7CE2; /* Fondo azul claro */
+    color: #232743; /* Texto azul oscuro */
+    border: 1px solid #797979; /* Borde gris oscuro */
+    padding: 5px;
+}
+
+QTableView {
+    background-color: #232743; /* Fondo azul oscuro */
+    color: #D8DBE2; /* Texto gris claro */
+    gridline-color: #797979; /* Líneas de la tabla gris oscuro */
+}
+
+QTableView::item {
+    background-color: #232743; /* Fondo azul oscuro de cada celda */
+    color: #D8DBE2; /* Texto gris claro */
+}
+
+/* Ajuste de fuente en tablas para mayor legibilidad */
+QTableView::item:selected {
+    background-color: #5E7CE2; /* Celda seleccionada en azul claro */
+    color: #232743; /* Texto azul oscuro */
+}

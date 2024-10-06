@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>872</width>
+    <height>567</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pantalla Principal - Administrador</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab_gestion_usuarios">
+       <attribute name="title">
+        <string>Gestión de usuarios</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_tab1">
+        <item>
+         <widget class="QTableWidget" name="tabla_usuarios">
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>140</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Nombre</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Contraseña</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Grupo</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Fecha creacion</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>fecha modificacion</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>fecha acceso</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="horizontalWidget" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QPushButton" name="pb_crear_usuario">
+             <property name="text">
+              <string>Crear Usuario</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pb_editar_usuario">
+             <property name="text">
+              <string>Editar Usuario</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pb_eliminar_usuario">
+             <property name="text">
+              <string>Eliminar Usuario</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_gestion_clientes">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="title">
+        <string>Gestion Clientes</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_tab3">
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>105</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Nombre</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Apellido</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>DNI</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>F.Nacimiento</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Direccion</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Telefono</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Fecha Registro</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Estado</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="pb_crear_cliente">
+            <property name="text">
+             <string>Crear Cliente</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_editar_cliente">
+            <property name="text">
+             <string>Editar Cliente</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_eliminar_cliente">
+            <property name="text">
+             <string>Borrar Cliente</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_estadisticas_cliente">
+            <property name="text">
+             <string>Estadisticas</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_gestion_productos">
+       <attribute name="title">
+        <string>Gestión de Productos</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_tab2">
+        <item>
+         <widget class="QTableWidget" name="tableWidget_2">
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>103</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Nombre</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Descripcion</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Precio Unitario</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>% Recargo Envio</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Unidad Medida</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Medida</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Codigo De Barra</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Imagen</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pb_crear_producto">
+            <property name="text">
+             <string>Crear Producto</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_editar_producto">
+            <property name="text">
+             <string>Editar Producto</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_eliminar_producto">
+            <property name="text">
+             <string>Eliminar Producto</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_ver_estadisticas_producto">
+            <property name="text">
+             <string>Ver Estadisticas</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_historial_precios">
+       <attribute name="title">
+        <string>Historial de Precios</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_tab4"/>
+      </widget>
+      <widget class="QWidget" name="tab_otros">
+       <attribute name="title">
+        <string>otros</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_tab5"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
