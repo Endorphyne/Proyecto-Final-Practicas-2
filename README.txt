@@ -1,1 +1,0 @@
-Para correr este modulo es necesario instalar las dependencias del requirements.txt, se recomienda usar un venv para esta accion
