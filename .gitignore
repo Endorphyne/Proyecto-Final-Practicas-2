@@ -4,3 +4,4 @@ uis/admin.ui
 uis/empleado.ui
 uis/registro_ventana.ui
 uis/Ventana-login.ui
+test.py
