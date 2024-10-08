@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QMainWindow,QDialog,QFormLayout,QLineEdit,QPushButton,QCheckBox,QComboBox
+from PyQt5.QtWidgets import QApplication, QMainWindow,QDialog,QFormLayout,QLineEdit,QPushButton,QCheckBox,QComboBox,QHeaderView
 from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.uic import loadUi
 from pathlib import Path
@@ -20,6 +20,12 @@ class Clase_ventana_principal_admin(QMainWindow):
         loadUi(r"admin.ui",self)
         self.setup()
     def setup (self):
+        # seccion para que las columnas de las tablas se acomoden en relacion al tamaño de la ventana
+        self.tabla_usuarios.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        self.tabla_clientes.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        self.tabla_productos.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+
+#coneccion botones
         #Usuarios
         self.pb_crear_usuario.clicked.connect(self.conectar_crear_usuario)
         self.pb_editar_usuario.clicked.connect(self.conectar_editar_usuario)#TODO agregar los datos del usuario para identificar que usuario editar
