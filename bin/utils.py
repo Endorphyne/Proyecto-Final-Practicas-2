@@ -150,6 +150,12 @@ def ult_vez_mod(id_usuario:int, accion:str) -> None:
     conexion = MySQLConnection(**config_db)
     cursor = conexion.cursor()
     try: 
-        consulta="INSERT INTO "
+        consulta=("UPDATE historial_usuarios SET accion =%s, fecha = %s WHERE id = %s")
+        values = (accion,datetime.now(), id_usuario)
+        cursor.execute(consulta,values)
+        conexion.commit()
     except:
+        #TODO implementar logger para errores. 
         pass
+
+def 

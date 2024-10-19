@@ -4,7 +4,7 @@ from Clase_ventana import Ui_MainWindow  # Asegúrate de que este es el nombre c
 from clase_admin import Ui_admin_mainWindow
 from clase_empleado import Ui_empleado_MainWindow
 from Clase_ventana_registro import Ui_ventana_registro
-import utils_loggin
+import bin.utils as utils
 
 class admin_window(QMainWindow, Ui_admin_mainWindow):
     def __init__(self) -> None:
@@ -28,7 +28,7 @@ class Clase_login(QMainWindow, Ui_MainWindow):
         """
         Ejecuta una ventana u otra basándose en el grupo del id_usuario (1:empleado/0:admin)
         """
-        id_usuario = utils_loggin.obtener_data(self.line_usuario.text())
+        id_usuario = utils.obtener_data(self.line_usuario.text())
         grupo = id_usuario[4]
         if grupo == 0:
             self.admin_window = admin_window()
@@ -55,16 +55,16 @@ class registro_window(QMainWindow, Ui_ventana_registro):
         self.btn_confirmar.clicked.connect(self.slot_usuarios)
 
     def slot_usuarios(self):
-        utils_loggin.agregar_usuario(self.validar_datos_registro())
+        utils.agregar_usuario(self.validar_datos_registro())
     
     def validar_datos_registro(self):
         try:
-            if utils_loggin.validador_email(self.line_correo.text()) == True:
+            if utils.validador_email(self.line_correo.text()) == True:
                 correo = self.line_correo.text()
             else:
                 raise ValueError("Correo ingresado no valido")
             print(self.line_usuario.text())
-            if utils_loggin.validar_usuario(self.line_usuario.text()) == True:
+            if utils.validar_usuario(self.line_usuario.text()) == True:
                 nombre_usuario = self.line_usuario.text()
             password1 = self.line_pass1.text()
             password2 = self.line_pass2.text()
@@ -97,7 +97,7 @@ class registro_window(QMainWindow, Ui_ventana_registro):
             return None
 
         else:
-            user = utils_loggin.usuario(correo, nombre_usuario, password, grupo)
+            user = utils.usuario(correo, nombre_usuario, password, grupo)
             return user
 
 
