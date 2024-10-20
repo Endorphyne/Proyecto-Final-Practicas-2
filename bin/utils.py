@@ -98,11 +98,7 @@ def obtener_data(usuario:str)->list:
 
 def hashear(contra:str)->str:
     return bcrypt.hashpw((contra.encode('utf-8')),bcrypt.gensalt()).decode('utf-8')
-
-#TODO's 
-'''
-Realizar la conexion logica con las ventanas SQL, Funciones 2 y 3 requieren los datos previos validados antes de pasarlos, ver si mejoraralo.
-'''
+''
 
 def validar_usuario(usuario:str) -> bool:
     """
@@ -145,7 +141,6 @@ def ult_vez_mod(id_usuario:int, accion:str) -> None:
     """
     Funcion que modifica la ultima vez de un usuario y registra su accion
     """
-    #TODO implementar logger
     config_db = conexion_db("bin\config.ini","Proyecto Practicas2")
     conexion = MySQLConnection(**config_db)
     cursor = conexion.cursor()
@@ -157,5 +152,3 @@ def ult_vez_mod(id_usuario:int, accion:str) -> None:
     except:
         #TODO implementar logger para errores. 
         pass
-
-def 

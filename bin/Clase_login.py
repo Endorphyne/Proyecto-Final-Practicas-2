@@ -48,7 +48,7 @@ class Clase_login(QMainWindow, Ui_MainWindow):
         self.close()
 
 class registro_window(QMainWindow, Ui_ventana_registro):
-    #TODO pasar a la aplicacion del admin
+    #TODO pasar a la aplicacion del admin para registrar usuarios
     def __init__(self) -> None:
         super().__init__()  # Llamada correcta a super()
         self.setupUi(self)
